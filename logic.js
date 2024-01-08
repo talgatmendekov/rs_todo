@@ -1,5 +1,34 @@
 let data = []
 
+const createTodoItem = ({id, title, date, completed}) => {
+    let titleLabel = document.createElement('label')
+    titleLabel.innerHTML = title
+
+    let dateLabel = document.createElement('label')
+    dateLabel.innerHTML = date
+
+    let inputCheckBox = document.createElement('input')
+    inputCheckBox.type = 'checkbox'
+    inputCheckBox.id = id
+    inputCheckBox.checked = completed
+    inputCheckBox.addEventListener('change', onDoneHandler )
+
+    let deleteBtn = document.createElement('button')
+    deleteBtn.id = id
+    deleteBtn.className = 'deleteBtn'
+    deleteBtn.innerHTML = 'delete'
+    deleteBtn.addEventListener('click', onDeleteHandler)
+
+    let todoItem = document.createElement('li')
+    todoItem.className = completed ? 'done' : ''
+
+    todoList.append(todoItem)
+    todoList.append(titleLabel)
+    todoList.append(dateLabel)
+    todoList.append(inputCheckBox)
+    todoList.append(deleteBtn)
+}
+
 function addTodoHandler() {
     if (inputTitle.value !== '') {
         data.push({
