@@ -26,7 +26,14 @@ const createTodoItem = ({id, title, date, completed}) => {
     todoList.append(titleLabel)
     todoList.append(dateLabel)
     todoList.append(inputCheckBox)
-    todoList.append(deleteBtn)
+    todoList.append(deleteBtn )
+}
+
+const renderTodos = () => {
+    todoList.innerHTML = ''
+    data.map((todoItem) => {
+        createTodoItem(todoItem)
+    })
 }
 
 function addTodoHandler() {
