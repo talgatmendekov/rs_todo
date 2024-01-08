@@ -55,3 +55,15 @@ function onDeleteHandler(event) {
     data = filteredTodo
     renderTodos()
 }
+
+function onDoneHandler(event) {
+    let checkedId = event.target.id
+    let modifiedTodo = data.map(todoItem => {
+        if (todoItem.id === checkedId) {
+            todoItem.completed = !todoItem.completed
+        }
+        return todoItem
+    })
+
+    data = modifiedTodo
+}
