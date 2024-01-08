@@ -48,3 +48,10 @@ function addTodoHandler() {
 
     inputTitle.value = ''
 }
+
+function onDeleteHandler(event) {
+    let currentId = event.target.id
+    let filteredTodo = data.filter((todoItem) => todoItem.id !== currentId )
+    data = filteredTodo
+    renderTodos()
+}
