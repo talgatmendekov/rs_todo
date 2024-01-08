@@ -24,10 +24,10 @@ const createTodoItem = ({id, title, date, completed}) => {
     todoItem.className = completed ? 'done' : ''
 
     todoList.append(todoItem)
-    todoList.append(titleLabel)
-    todoList.append(dateLabel)
-    todoList.append(inputCheckBox)
-    todoList.append(deleteBtn )
+    todoItem.append(titleLabel)
+    todoItem.append(dateLabel)
+    todoItem.append(inputCheckBox)
+    todoItem.append(deleteBtn )
 }
 
 const renderTodos = () => {

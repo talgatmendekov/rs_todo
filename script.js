@@ -23,6 +23,11 @@ let firstDiv = document.createElement("div");
 firstDiv.className = "firstDiv";
 mainBlock.append(firstDiv);
 
+// creating listContainer for the future todos
+let todoList = document.createElement('ul')
+todoList.className = 'todoList'
+mainBlock.append(todoList)
+
 // creating input for the title
 
 let inputTitle = document.createElement('input')
@@ -44,4 +49,8 @@ let addBtn = document.createElement('button')
 addBtn.className = 'addBtn'
 addBtn.innerHTML = 'Add todo'
 firstDiv.append(addBtn)
+
+
+
+
 
