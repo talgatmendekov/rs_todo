@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1556767223-80843e91e7d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .mainContainer {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .projectTitle {
+    text-align: center;
+    font-size: 5rem;
+    color: aliceblue;
+    text-shadow: 3px 3px 6px rgb(140, 133, 133);
+  }
+  
+  .mainBlock {
+    width: 60%;
+    background-color: rgb(140, 135, 145);
+    opacity: 0.8;
+    padding: 2rem;
+  }
+  
+  .firstDiv {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 1rem;
+  }
+  
+  .firstDiv input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .addBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  .addBtn:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+  }
+  
+  .todoList li {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-bottom: 0.5rem;
+  }
+  
+  .deleteBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 0.5rem 0;
+  }
+  
+  .deleteBtn:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 0.5rem 0;
+    border-radius: 12px;
+  }
+  
+  .done {
+    text-decoration: line-through;
+    text-decoration-color: red;
+  }
