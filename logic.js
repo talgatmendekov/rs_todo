@@ -1,4 +1,5 @@
-let data = []
+let localData = JSON.parse(localStorage.getItem('todos'))
+let data = localData ? [...localData] : []
 
 const createTodoItem = ({id, title, date, completed}) => {
     let titleLabel = document.createElement('label')
@@ -44,7 +45,12 @@ function addTodoHandler() {
             date:inputDate.value,
             completed: false
         })
+        localStorage.setItem('todos', JSON.stringify(data))
+        renderTodos()
+    }else {
+        alert('No todos please type something')
     }
+
 
     inputTitle.value = ''
 }
@@ -53,6 +59,7 @@ function onDeleteHandler(event) {
     let currentId = event.target.id
     let filteredTodo = data.filter((todoItem) => todoItem.id !== currentId )
     data = filteredTodo
+    localStorage.setItem('todos', JSON.stringify(data))
     renderTodos()
 }
 
@@ -66,4 +73,9 @@ function onDoneHandler(event) {
     })
 
     data = modifiedTodo
+    localStorage.setItem('todos', JSON.stringify(data))
+    renderTodos()
 }
+
+renderTodos()
+addBtn.addEventListener('click', addTodoHandler)
